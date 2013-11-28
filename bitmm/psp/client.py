@@ -120,7 +120,7 @@ class PSPClient(object):
             signvalues.append(str(data[field]))
         signvalues.append(data.get('nonce', ''))
         sign = hmac.new(
-            ''.join(signvalues), self.apikey, hashlib.sha256).hexdigest()
+            self.apikey, ''.join(signvalues), hashlib.sha256).hexdigest()
         if sign != data['sign']:
             raise InvalidSignature(data['sign'])
 
