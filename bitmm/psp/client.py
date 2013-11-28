@@ -59,6 +59,7 @@ class PSPClient(object):
         (s)he is redirected to 'url_success' or 'url_failure', depending on
         payment status.
         """
+        amount_eur = self._normalize_amount(amount_eur)
         sign_fields = (
             'amount_eur', 'description', 'url_success', 'merchant_id')
         data = self._call(
