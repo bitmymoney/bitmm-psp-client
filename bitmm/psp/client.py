@@ -105,7 +105,7 @@ class PSPClient(object):
                 signvalues.append(str(data[field]))
             signvalues.append(data.pop('nonce', '') or '')
             sign = hmac.new(
-                ''.join(signvalues), self.apikey, hashlib.sha256).hexdigest()
+                self.apikey, ''.join(signvalues), hashlib.sha256).hexdigest()
             data['sign'] = sign
         reqfunc = getattr(requests, method.lower())
         response = reqfunc('%s%s' % (self.base_url, path), params=data)
