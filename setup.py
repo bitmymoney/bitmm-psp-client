@@ -28,6 +28,7 @@ setup(
     url='https://github.com/bitmymoney/bitmm-psp-client',
     keywords='bitmm api bitcoin psp',
     packages=find_packages(),
+    namespace_packages=['bitmm'],
     test_suite="tests",
     install_requires=requires,
     classifiers = [
