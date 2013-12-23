@@ -1,4 +1,4 @@
-bitmm-psp-client
-================
+bitmm-psp-client-python
+=======================
 
-Python implementation of the Bitmymoney Payment Service Processor API
+Python implementation of the Bitmymoney Bitcoin Payment Service Provider API
